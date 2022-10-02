@@ -1,0 +1,30 @@
+// Class Class Diagram
+// -------------------
+
+[Class]->[Teacher];
+[LearningInstitution]->[Teacher]
+
+
+// Add more detail
+// [≪IDisposable≫;Customer|+forname: string;+surname: string;-password: string|login(user,pass)]
+
+//[Teacher|-name: String|+Teacher(name: String); +toString(): String]
+
+
+
+// Sweet Class Diagram
+// -------------------
+
+// Chain elements like this
+// [Customer]<>-orders*>[Order]++-0..*>[LineItem]
+[Class]->[Teacher];
+[LearningInstitution]->[Teacher]
+
+// Add notes
+//[Order]-[note: Aggregate Root ala DDD]
+
+// Add more detail
+// [≪IDisposable≫;Customer|+forname: string;+surname: string;-password: string|login(user,pass)]
+
+[Teacher|-name: String|+Teacher(name: String); +toString(): String]
+[Class|-teacher: Teacher; -course: String|+Class(teacher: Teacher, course: String)]
