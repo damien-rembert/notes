@@ -1,5 +1,23 @@
 # Vi
 
+# Normal mode
+u	undo last change
+U	undo all changes on that line
+ctrl+r	redo
+x	remove? cut?
+d	delete, can be followed by motion
+dd	delete whole line
+i	insert
+a	append
+p	put (paste something that's been deleted
+
+
+## motions
+e	end of word
+w	whole word, up to next word?
+$	end of line
+0	start of line
+
 # Motions
 w => forward word by word
 b => backward word by word
