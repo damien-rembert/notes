@@ -1,6 +1,13 @@
 # user management
 
 
-nano /etc/fstab
+usermod
+useradd
+chgroup
 
-blkid
+cat /etc/passwd
+
+
+## ownership
+chmod
+chown

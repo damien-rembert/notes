@@ -1,4 +1,4 @@
-# jobs
+# job management
 
 ## advice
 add & at the end of the line to make jobs start in background
@@ -22,4 +22,5 @@ cmd1 &				run cmd 1 in background
 ### fg
 ### kill
 ### disown
+### nohup
 

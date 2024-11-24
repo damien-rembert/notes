@@ -1,16 +1,3 @@
-# Screen
-
-## options
-
-## keyboard shortcut
-
-
-## advice
-
-## shortcuts
-
-## behaviour
-
-## commands
+# pipe
 
 look at flow control 
