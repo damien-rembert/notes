@@ -7,20 +7,17 @@ no INSERT, UPDATE, DELETE
 no SELECT *
 
 # Try to avoid:
-Querying for null rows
 ```SQL
+-- Querying for null rows
 SELECT Id, Name FROM Account WHERE Custom_Field__c = null
-```
-Negative filter operators—Using operators such as !=, NOT LIKE, or EXCLUDES
-```SQL
-SELECT CaseNumber FROM Case WHERE Status != ‘New’
-```
-Leading wildcards—Queries
-```SQL
-SELECT Id, LastName, FirstName FROM Contact WHERE LastName LIKE ‘%smi%’
-```
-Text fields with comparison operators—Using comparison operators, such as >, <, >=, or <=, with text-based fields
-```SQL
+
+-- Negative filter operators—Using operators such as !=, NOT LIKE, or EXCLUDES
+SELECT CaseNumber FROM Case WHERE Status != 'New'
+
+-- Leading wildcards—Queries
+SELECT Id, LastName, FirstName FROM Contact WHERE LastName LIKE '%smi%'
+
+-- Text fields with comparison operators—Using comparison operators, such as >, <, >=, or <=, with text-based fields
 SELECT AccountId, Amount FROM Opportunity WHERE Order_Number__c > 10
 ```
 
