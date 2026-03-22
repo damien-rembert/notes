@@ -17,11 +17,10 @@ Class-level annotation, makes the class a Spring Bean, adds it to the bean regis
 ## @Controller: handles requests and emits responses
 ## @Repository: handles CRUD for accessing and persisting data
 ## @Service: handles business logic
-Class-level annotation, makes the class a Spring Bean. Used instead of `@Component`, these stereotypes clarify intent.
+Class-level annotation, makes the class a Spring Bean. Used instead of `@Component`, these stereotype annotations clarify intent.
+`@Controller` is for web controller classes that receive and emit HTTP requests/responses (eg for the Spring MVC framework)
 
-
-
-## @RestController and @GetMapping/@PostMapping...
+## @RestController
 Class-level. Declares a controller that handles http requests and returns JSON or XML rather than a view template.
 
 ## @RequestMapping and @GetMapping/@PostMapping...
@@ -35,6 +34,7 @@ public class OrderController {
 	}
 }
 ```
+Map HTTP requests. 
 
 ## @PathVariable
 Used to grab variables from the path and pass them as params to the method.
@@ -43,10 +43,12 @@ Used to grab variables from the path and pass them as params to the method.
 Annotate a field, constructor or setter
 Prefer constructor injection.
 Activates dependency injection. Will inject the appropriate bean as long as there only one bean of that type.
+(otherwise needs to be indicated)
 
 ## @Value
 Annotate a field or setter (constructor?)
 For injecting values, including from property file.
+Good to avoid hard-coded values.
 Can be used with Spring Expression Language.
 ```java
 @Value("my hard-coded value")
@@ -67,7 +69,7 @@ Can be used with `@ComponentScan("com.packagename")`.
 
 ## @SpringBootApplication
 Enables auto-configuration and component scanning. Combines multiple annotations: `@Configuration`, `@EnableAutoConfiguration` and `@ComponentScan`
-
+On main class
 
 ## @ComponentScan
 ```java
@@ -77,11 +79,12 @@ public class MyConfig {...}
 ```
 
 ## @Bean
-Method-level, used in @Configuration classes. It will take the return value of the method and register that bean in the Spring bean registry, making it available for injection.
-Allows more control over the construction of the bean that class-level annotations.
+Method-level
+Annotate a method and tells Spring that the return of this method should be a bean and makes it available for injection.
 
 ## @Transactional
-Method-level. Spring will handle preparation and eventual rollback in case of issue.
+Method-level. Spring will handle the transaction (eg preparation, eventual rollback in case of issue, commit at the end of the transaction)
+
 
 
 # Proxies

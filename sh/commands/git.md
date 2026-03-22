@@ -76,6 +76,9 @@ git push -u origin --tags # pushes up any tags
 # Workflows
 
 ## Collaborating
+
+use git rebase when merging instead of git pull to keep history cleaner
+
 The repo owner adds other devs as collaborators.
 Every one clones the repo locally.
 ```bash
@@ -122,3 +125,10 @@ git merge dr_newfeature # !!! merge the branch into main
 git push origin main # !!! push to GitHub
 ```
 In GitHub, create a new pull request, which will be sent to the owner of the original repo.
+
+
+## aliases
+```bash
+git log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset %C(yellow)%d%Creset' --branches
+git ls-tree -r $(git branch --show-current) --name-only
+```
