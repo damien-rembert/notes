@@ -56,5 +56,6 @@ Python
 Spring
 try jujitsu as git replacement
 datasette sql training
-
+burp suite
+wireshark
 
